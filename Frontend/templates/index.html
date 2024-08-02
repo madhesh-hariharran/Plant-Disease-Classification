@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Disease Tracker</title>
+    <style>
+        /* Resetting default browser styles */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Fonts */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        /* Layout */
+        body {
+            background-color: #f0f8f0;
+            /* Light green background */
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        /* Title bar */
+        .title-bar {
+            background-color: #4CAF50;
+            /* Green */
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Description */
+        .website-description {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h1,
+        h2 {
+            color: #006400;
+            /* Dark green for headings */
+            margin-bottom: 10px;
+        }
+
+        p {
+            margin-bottom: 10px;
+        }
+
+        ol,
+        ul {
+            margin-bottom: 10px;
+            padding-left: 20px;
+        }
+
+        ol li,
+        ul li {
+            margin-bottom: 5px;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+
+        /* Forms */
+        .my-form {
+            background-color: #4CAF50;
+            /* Green background */
+            padding: 20px;
+            border-radius: 5px;
+            /* Reduced border radius */
+            margin-bottom: 20px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            /* Align content to the center */
+        }
+
+        .my-form input[type="text"],
+        .my-form input[type="file"] {
+            width: calc(100% - 22px);
+            /* Adjusting for border and padding */
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            /* Removing border */
+            border-radius: 5px;
+            /* Rounded corners */
+            background-color: #fff;
+            /* White background */
+            box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
+            /* Inner shadow effect */
+        }
+
+        .my-form input[type="submit"] {
+            width: auto;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            background-color: #45a049;
+            /* Darker green */
+            color: #fff;
+            transition: background-color 0.3s ease;
+        }
+
+        .my-form input[type="submit"]:hover {
+            background-color: #4CAF50;
+            /* Green on hover */
+        }
+
+        /* Language options */
+        .language-options {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .language-options button {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            padding: 10px 20px;
+            margin-right: 10px;
+            transition: background-color 0.3s ease;
+        }
+
+        .language-options button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="language-options">
+        <button onclick="changeLanguage('ta')">தமிழ்</button>
+        <button onclick="changeLanguage('en')">English</button>
+        <button onclick="changeLanguage('ml')">മലയാളം</button>
+    </div>
+    <div class="website-description" lang="ta">
+        <!-- Tamil Description Content -->
+        <h1>கற்கொழுக்கு நெருப்பு டிரெக்கர்</h1>
+        <p>பயிர் சாகுபடியில் உங்கள் விலைமதிப்பற்ற துணையாகச் செயல்படும் வகையில் உன்னிப்பாக வடிவமைக்கப்பட்ட எங்களின்
+            புதுமையான தாவர நோய் டிராக்கரை அறிமுகப்படுத்த அனுமதிக்கவும். அதன் மேம்பட்ட செயல்பாடுகளுடன், உங்கள் பயிர்களின்
+            ஆரோக்கியம் மற்றும் விளைச்சலுக்கு ஆபத்தை விளைவிக்கும் நோய்களை முன்கூட்டியே கண்டறிந்து தடுப்பதில் உங்களுக்கு
+            உதவ இந்தக் கருவி வடிவமைக்கப்பட்டுள்ளது. இலைப் படங்களைப் பதிவேற்றுவதன் மூலம், சாத்தியமான அச்சுறுத்தல்களை
+            விரைவாகவும் துல்லியமாகவும் கண்டறியும் எங்கள் தொழில்நுட்பத்தின் ஆற்றலைப் பயன்படுத்தி, உங்கள் விவசாய
+            முதலீடுகளைப் பாதுகாக்க சரியான நேரத்தில் மற்றும் பயனுள்ள நடவடிக்கைகளை எடுக்க உங்களுக்கு அதிகாரம் அளிக்கிறது.
+        </p>
+        <p>தயவுசெய்து உங்கள் பரிந்துரைப் பெயர் உட்பொருள் தேவைப்படுகின்றதாக உள்ளதாகச் சரிபார்க்கவும்.</p>
+        <h2>விரிவான வழிகாட்டுகள்</h2>
+        <p><strong>விவரம்:</strong>அதிகப்படியான நெருக்கங்களை கண்டுபிடிக்க உங்கள் பயிர்கள் நேரடியாக
+            உருவாக்கப்பட்ட கற்கொழுக்கு நெருப்பு டிரெக்கரை பயன்படுத்தவும்.</p>
+        <ol>
+            <li>"பரிதாப அடையாள எண்" புலத்தில் உங்கள் பரிதாப அடையாள எண் உள்ளிடுக.</li>
+            <li>உங்கள் சாதனத்தில் இருந்து படம் தேர்வு செய்ய அமைக்கப்பட்ட "கோப்புக் கூட்டத்தை தேர்ந்தெடுக்கவும்" பொத்தானை
+                கிளிக் செய்யவும்.</li>
+            <li>படியை சமர்ப்பிக்க கீழே உள்ள "பதிவேற்று" பொத்தானை அழுத்தவும்.</li>
+        </ol>
+    </div>
+
+    <!-- English Description Content -->
+    <div class="website-description" lang="en">
+        <h1>Plant Disease Tracker</h1>
+        <p>Allow us to introduce our innovative Plant Disease Tracker, meticulously designed to serve as your invaluable
+            companion in the realm of crop cultivation. With its advanced functionalities, this tool is tailored to
+            assist you in the proactive identification and prevention of diseases that may jeopardize the health and
+            yield of your crops. By simply uploading leaf images, you can harness the power of our technology to swiftly
+            and accurately detect any potential threats, empowering you to take timely and effective measures to
+            safeguard your agricultural investments.</p>
+        <p>Please enter your recommended identification number for reference.</p>
+        <h2>Detailed Instructions</h2>
+        <p><strong>Instructions:</strong> Use our Plant Disease Tracker to quickly identify diseases
+            affecting your crops.</p>
+        <ol>
+            <li>Enter your Farmer Identification Number in the "Enter Farmer ID" field.</li>
+            <li>Choose the leaf image file from your device by clicking on the "Choose File" button.</li>
+            <li>Submit the form by clicking on the "Upload" button below.</li>
+        </ol>
+    </div>
+
+
+    <!-- Malayalam Description Content -->
+    <div class="website-description" lang="ml">
+        <h1>സസ്തനി രോഗ ട്രാക്കർ</h1>
+        <p>നിങ്ങളുടെ സസ്തനി രോഗ ട്രാക്കർ നിങ്ങളുടെ സഹായത്തിന് ഇവിടെ പ്രസ്തുതമാക്കപ്പെട്ടിരിക്കുന്നു! നിങ്ങളുടെ
+            വിവരങ്ങള്‍ ഉപയോഗിച്ച് നിങ്ങളുടെ സസ്തനി കൃഷിയുടെ ഭയം എടുക്കുന്ന ജലജനിത രോഗങ്ങളെ തടയാനും അവയെ ശ്രദ്ധിക്കാനും
+            ഇത് ഉപയോഗിക്കുക. താഴെ നിലവിലെ ഇമേജുകള്‍ അപ്‌ലോഡ് ചെയ്യുക.</p>
+        <p>ദയവായി നിങ്ങളുടെ ശിഫാ ഐഡിയുടെ നിസ്സാരം നൽകുക.</p>
+        <h2>വിശദമായ നിര്‍ദ്ദേശങ്ങൾ</h2>
+        <p><strong>നിര്‍ദ്ദേശങ്ങൾ:</strong> നിങ്ങളുടെ സസ്തനി രോഗ ട്രാക്കർ ഉപയോഗിച്ച് നിങ്ങളുടെ വര്‍ഷത്തിലെ നിങ്ങളുടെ
+            സസ്തനി കൃഷിക്ക് അടിസ്ഥാനപ്പെടുന്ന ജലജനിത രോഗങ്ങളെ ശ്രദ്ധിക്കുക.</p>
+        <ol>
+            <li>നിങ്ങളുടെ ഫാമർ അടെന്റീഫിക്കേഷൻ നമ്പറിനെ "ഫാമർ ഐഡി" പോലെ നൽകുക.</li>
+            <li>നിങ്ങളുടെ ഉപകരണത്തിൽ നിന്ന് ഇമേജ് ഫയല്‍ തിരഞ്ഞെടുക്കാൻ "ഫയല്‍ തിരഞ്ഞെടുക്കുക" ബട്ടൺ അമർത്തുക.</li>
+            <li>താഴെ നിലവിലെ "അപ്‌ലോഡ്" ബട്ടൺ അമർത്തി ഫോം സമർപ്പിക്കുക.</li>
+        </ol>
+    </div>
+
+    <!-- Form for Uploading -->
+    <div>
+        <form class="my-form" method="POST" action="/upload" enctype="multipart/form-data" lang="ta">
+            <h2>நெருங்கிப் படத்தை பதிவேற்றுக</h2>
+            <input type="text" name="user_id" placeholder="பரிதாப அடையாள எண்" required>
+            <input type="file" name="file" required>
+            <button type="submit">பதிவேற்று</button>
+        </form>
+    </div>
+
+    <div>
+        <form class="my-form" method="POST" action="/upload" enctype="multipart/form-data" lang="en">
+            <h2>Upload Leaf Image</h2>
+            <input type="text" name="user_id" placeholder="Farmer Identification Number" required>
+            <input type="file" name="file" required>
+            <button type="submit">Upload</button>
+        </form>
+    </div>
+
+    <div>
+        <form class="my-form" method="POST" action="/upload" enctype="multipart/form-data" lang="ml">
+            <h2>ചിത്രം അപ്ലോഡ് ചെയ്യുക</h2>
+            <input type="text" name="user_id" placeholder="പിറ്റി ഐഡി നമ്പർ" required>
+            <input type="file" name="file" required>
+            <button type="submit">അപ്ലോഡ്</button>
+        </form>
+    </div>
+
+
+    <script>
+        function changeLanguage(lang) {
+            document.querySelectorAll('.website-description').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('[lang="' + lang + '"]').forEach(el => el.style.display = 'block');
+            document.querySelectorAll('.my-form').forEach(el => el.style.display = 'none');
+            document.querySelectorAll('[lang="' + lang + '"]').forEach(el => el.style.display = 'block');
+        }
+
+        function redirectToLastHTML() {
+            window.location.href = "result.html"; // Replace with the actual path to the last HTML file
+        }
+
+        window.onload = function () {
+            changeLanguage('en');
+        };
+    </script>
+</body>
+
+</html>
